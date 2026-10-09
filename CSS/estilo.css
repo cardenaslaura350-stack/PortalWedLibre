@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #111827 !important;
+    border-bottom: 3px solid orangered;
+}
+
+header {
+    width: 100vw;
+    min-height: 10vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linea {
+    border: none;
+    height: 3px;
+    background-color: orangered;
+    margin: 40px 0 !important;
+    opacity: 1 !important;
+}
+
+.texto-justificado {
+    text-align: justify !important;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+
+    /* 1. Contenedor padre: cambia de fila a columna */
+    .contenedor-principal,
+    main,
+    .wrapper,
+    .layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    /* 2. Columna principal (toma todo el ancho y se mantiene arriba) */
+    .contenido-principal,
+    main section,
+    .columna-principal {
+        width: 100% !important;
+        order: 1;
+        /* Garantiza que aparezca primero */
+    }
+
+    /* 3. Columna lateral (pasa a ocupar el 100% y se ubica abajo) */
+    aside,
+    .sidebar,
+    .columna-lateral {
+        width: 100% !important;
+        float: none !important;
+        /* Elimina flotados antiguos si usabas float */
+        order: 2;
+        /* Se posiciona justo debajo del contenido principal */
+        margin-top: 20px;
+        border-color: #2222e6;
+    }
+}
+
+/* xxl Extra Extra Large */
+@media (max-width: 1400px) {}
+
+/* xl Extra Large */
+@media (max-width: 1200px) {}
+
+/* lg Large */
+@media (max-width: 992px) {}
+
+/* md Medium */
+@media (max-width: 768px) {}
+
+/* sm Small */
+@media (max-width: 576px) {}
+
+/* Extra small */
+@media (max-width: 575.98px) {}
